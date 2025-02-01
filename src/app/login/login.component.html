@@ -1,0 +1,20 @@
+<ion-content style="display: flex; justify-content: center; align-items: center;">
+  <ion-card class="login-container">
+    <form (ngSubmit)="onLogin()">
+      <ion-card-header>
+        <ion-card-title>Inico de sesión</ion-card-title>
+        <ion-card-subtitle>Ingresa tus credenciales</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-input class="ion-margin-bottom" fill="outline" label="Email" label-placement="floating" type="email" [(ngModel)]="email" name="email"
+          required></ion-input>
+        <ion-input class="ion-margin-bottom" fill="outline" label="Password" label-placement="floating" type="password" [(ngModel)]="password"
+          name="password" required></ion-input>
+        <ion-button expand="block" type="submit" [disabled]="!email || !password">Login</ion-button>
+        <ion-text color="medium" class="forgot-password">
+          <a href="#" (click)="onForgotPassword()">¿Olvidaste tu contraseña?</a>
+        </ion-text>
+      </ion-card-content>
+    </form>
+  </ion-card>
+</ion-content>
